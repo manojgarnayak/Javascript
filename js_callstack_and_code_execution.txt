@@ -1,0 +1,48 @@
+//** EXECUTION CONTEXT **//
+
+Execution context in JavaScript is divided into two parts: Memory and Call Stack.
+
+Programs in JavaScript run in two phases, understanding the execution context is fundamental for effective coding.
+
+Global Execution Context is crucial, and references are made to it wherever a Global Execution Context is formed.
+
+The browser environment is essential, with differences in the global execution context due to JavaScript environments like Node.js.
+
+The window object in the browser holds the Value Window Object, influencing code execution, especially in environments like React.
+
+JavaScript operates in a single thread, and understanding how it handles execution within that thread is crucial.
+
+Awareness of Global Execution Context and Function Execution Context is fundamental; documentation may introduce additional execution contexts.
+
+The process of execution involves running code inside a box, executing in two phases: Creation Phase and Execution Phase.
+
+Memory creation phase involves memory allocation for variables and mathematical functions, locking space for declared variables.
+
+Execution phase is distinct, involving the actual execution of mathematical functions but not executed variables in memory creation phase.
+
+Memory creation phase locks space for declared variables, while execution phase involves the actual execution of code and mathematical functions.
+
+Global execution context (environment) is the first to run, locking variables and setting the initial context for the script's execution.
+
+Memory creation phase involves gathering variables and storing them within the memory space.
+
+During the memory creation phase, variable names are recorded, and their definitions are stored.
+
+Interesting point: A new environment variable and execution thread are generated for each function execution.
+
+New execution context is created for each function call, containing variables and a separate sandbox environment.
+
+Memory and execution phases need to occur for each function call, including creating a sandbox and executing code.
+
+Execution is not initiated from this point; the execution context is prepared in advance with the actual execution happening later.
+
+The return statement in the global execution context concludes the function execution and returns the result.
+
+When a function returns, it doesn't immediately go back to the global execution context. Instead, it enters the execution phase, and only after that, the value is returned to the global execution context.
+
+After the global execution context's stack becomes empty, it deletes the execution context. This is a crucial point to remember.
+
+Creating a new execution context after reducing the global execution context involves the environment variables, and the cycle repeats with a new thread and new environment variables.
+
+Execution contexts go through different phases: thread phase, memory phase, and execution context phase. Understanding these phases is crucial for comprehending JavaScript execution.
+
