@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation</title>
+</head>
+<body style="background-color: #212121; color: aliceblue;">
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+</body>
+<script>
+    // const addLanguage = (lang) => {
+    //     const li = document.createElement('li');
+    //     li.innerHTML = `${lang}`
+    //     document.querySelector('.language').appendChild(li)
+    // }
+    // addLanguage("Manoj")
+    // addLanguage("Garnayak")
+
+
+    const optimisedlang = (lang) => {
+        const li = document.createElement('li')
+        li.appendChild(document.createTextNode(lang))
+        document.querySelector('.language').appendChild(li);
+    }
+    optimisedlang("Python")
+    optimisedlang("ReactJs")
+    optimisedlang("java")
+    optimisedlang("CPP")
+    optimisedlang("Nodejs")
+
+
+
+    //                      EDIT
+    const changelang = document.querySelector("li:nth-child(4)")
+    const newli = document.createElement('li')
+    newli.textContent = 'GOlang'
+    changelang.replaceWith(newli)
+
+    const anotherlang = document.querySelector("li:first-child")
+    anotherlang.outerHTML ='<li>Typescript<li>'
+
+        
+    //                      Remove
+    const removelang = document.querySelector('li:nth-child(1)')
+    removelang.remove()
+    </script>
+</html>
